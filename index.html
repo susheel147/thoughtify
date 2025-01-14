@@ -29,6 +29,33 @@
             font-size: 2rem;
             margin-top: 10px;
         }
+         @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem; /* Reduce size for smaller screens */
+            }
+
+            p {
+                font-size: 1.5rem; /* Adjust paragraph size */
+            }
+
+            body {
+                padding-bottom: 30px; /* Adjust bottom spacing for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem; /* Further reduce for very small screens */
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            body {
+                padding-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
