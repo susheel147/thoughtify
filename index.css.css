@@ -202,13 +202,13 @@ footer a {
     }
 
     .quote-item {
-        max-width: 90%; /* Limit quote width for better readability */
+        max-width: 100%; /* Limit quote width for better readability */
         text-align: center;
         padding: 12px;
     }
 
     .quote-item img {
-        max-width: 120%; /* Ensure images fit within the container */
+        max-width: 100%; /* Ensure images fit within the container */
         height: auto;
         border-radius: 8px;
          transition: transform 0.3s ease;/* Add some rounded corners */
@@ -270,7 +270,7 @@ footer a {
     }
 
     .quote-item img {
-        width: 120%; /* Ensure images fit within the container */
+        width: 100%; /* Ensure images fit within the container */
         margin-bottom: 10px; /* Adjust spacing for mobile */
         border-radius: 6px; /* Slightly smaller rounded corners */
         transition: transform 0.3s ease;
