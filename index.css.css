@@ -254,7 +254,17 @@ footer a {
         height: 25px;
         font-size:0rem;
         padding: 1px;
+        transition: transform 0.3s ease, padding 0.3s ease; /* Smooth transition for both movement and visibility */
+ 
+   position: fixed;
+    z-index: 1000;
     }
+    .instagram-icon.hidden {
+  transform: translateY(-300px); /* Moves the icon downward (hidden) */
+  opacity: 0; /* Makes it invisible */
+  pointer-events: none; /* Disables clicks when hidden */
+}
+    
  .instagram-icon i {
         font-size: 20px;  /* Adjust icon size */
     }
