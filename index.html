@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="index.css.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+     <style>
+        /* Prevent user-select and pointer events on images */
+        img {
+            pointer-events: none; /* Disable drag actions */
+            -webkit-user-select: none; /* Disable text selection on mobile Safari */
+            user-select: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -92,6 +100,28 @@
         lastScrollY = window.scrollY; // Update lastScrollY
     });
 });
+         document.addEventListener("contextmenu", (e) => {
+                if (e.target.tagName === "IMG") {
+                    e.preventDefault();
+                    alert("Right-click is disabled to protect images.");
+                }
+            });
+
+            // Disable long-press on mobile for images
+            let timer;
+            document.addEventListener("touchstart", (e) => {
+                if (e.target.tagName === "IMG") {
+                    timer = setTimeout(() => {
+                        e.preventDefault();
+                        alert("Long press is disabled to protect images.");
+                    }, 500); // Trigger after 500ms
+                }
+            });
+
+            document.addEventListener("touchend", () => {
+                clearTimeout(timer); // Cancel the timer if touch ends early
+            });
+        });
     </script>
 </body>
 </html>
