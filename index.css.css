@@ -1,0 +1,264 @@
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s, padding 0.3s;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 90px;
+padding-left: 20px;
+padding-right: 20px;
+margin: 0;
+
+
+
+
+}
+
+header.scrolled {
+    background-color: black;
+    padding: 10px 0;
+}
+
+.instagram-icon {
+    position: fixed;
+    top: 39px;
+    left: 20px;
+    font-size: 1.5rem;
+    color: yellow;
+    background-color: lightgrey;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+.instagram-icon:hover {
+    color: #e1306c;
+    transform: scale(1.1);
+    transition: transform 0.3s, color 0.3s;
+}
+.instagram-icon:hover {
+    background: linear-gradient(45deg, #f5a623, #d66dc9, #8a3ab9);
+}
+
+.instagram-icon i {
+    color: #E4405F; /* Instagram gradient color */
+    font-size: 30px;
+}
+
+/* Hidden State of Instagram Icon */
+.instagram-icon.hidden {
+    opacity: 0; /* Makes the icon invisible */
+    pointer-events: none; /* Prevents interaction when hidden */
+    transform: translateY(-20px);
+     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    transition: color 0.3s;
+ line-height: 1;
+     font-weight: normal;
+}
+
+header.scrolled h1 {
+    color: white;
+}
+
+header p {
+   margin:5px 0 0 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+    justify-content: center;
+padding-bottom: 45px;
+
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.quote-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote-item {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+.quote-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.quote-item p {
+    margin: 10px 0 0;
+    font-size: 1.3rem;
+    color: #555;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* General Mobile Styles */
+@media screen and (max-width: 428px) {
+    /* Header Adjustments for Mobile */
+    header {
+        text-align: center;
+        padding: 10px;  /* Adjust padding for mobile */
+        flex-direction: column; /* Stack header items vertically */
+    }
+
+    header h1 {
+        font-size: 2rem;  /* Reduce font size for mobile */
+        margin-bottom: 10px; /* Give some space below */
+    }
+
+    header p {
+        font-size: 1.2rem;  /* Adjust sub-header font size */
+        margin-top: 0;  /* Remove any top margin */
+        font-weight: normal;
+    }
+
+    /* Adjust Instagram Icon for Mobile */
+    .instagram-icon {
+        top: 30%;  /* Center it vertically */
+        left: 10%;  /* Center it horizontally */
+        transform: translate(-50%, -50%);  /* Fine-tune the centering */
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        padding: 6px;
+    }
+
+    .instagram-icon i {
+        font-size: 30px;  /* Adjust icon size */
+    }
+
+    /* Quote Styling Adjustments for Mobile */
+    .quote-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .quote-item {
+        max-width: 90%; /* Limit quote width for better readability */
+        text-align: center;
+        padding: 12px;
+    }
+
+    .quote-item img {
+        max-width: 100%; /* Ensure images fit within the container */
+        height: auto;
+        border-radius: 8px; /* Add some rounded corners */
+    }
+
+    .quote-item p {
+        font-size: 1.1rem;
+        margin-top: 10px;
+        color: #555;
+    }
+
+    /* Footer Adjustments for Mobile */
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        font-size: 1rem;
+    }
+}
+
+/* For Extra Small Devices (Portrait Mobile) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0px; 
+        align-items: normal; /* Reduce header padding */
+    }
+
+    header h1 {
+        font-size: 1.5rem;  /* Make header font size smaller */
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .instagram-icon {
+        top: 45.5px;  /* Adjust icon position */
+        left: 30px;
+        width: 25px;
+        height: 25px;
+        font-size:0rem;
+        padding: 1px;
+    }
+ .instagram-icon i {
+        font-size: 20px;  /* Adjust icon size */
+    }
+
+    .quote-item p {
+        font-size: 0.5rem; /* Adjust font size for smaller text */
+    }
+
+    footer {
+        padding: 10px 0;
+        font-size: 0.85rem;
+    }
+}
