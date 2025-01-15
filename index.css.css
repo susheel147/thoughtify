@@ -122,12 +122,17 @@ main {
     overflow: hidden;
     text-align: center;
     padding: 15px;
+ margin-bottom: 20px;
 }
 
 .quote-item img {
     width: 100%;
     height: auto;
     display: block;
+    margin-bottom: 15px; /* Add space below each image */
+    border-radius: 8px; /* Smooth rounded corners for images */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    gap: 20px;
 }
 
 
