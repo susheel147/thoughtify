@@ -3,63 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            background: url('Picsart_25-01-15_04-11-09-861.jpg') no-repeat center center fixed;
-            background-size: cover; /* Make the image cover the entire screen */
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-            justify-content: flex-end;
-        }
-        h1 {
-            font-size: 5rem;
-            color: black;
-            margin: 0;
-        }
-        p {
-            font-size: 2rem;
-            margin-top: 10px;
-        }
-         @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem; /* Reduce size for smaller screens */
-            }
-
-            p {
-                font-size: 1.5rem; /* Adjust paragraph size */
-            }
-
-            body {
-                padding-bottom: 30px; /* Adjust bottom spacing for smaller screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem; /* Further reduce for very small screens */
-            }
-
-            p {
-                font-size: 1.2rem;
-            }
-
-            body {
-                padding-bottom: 20px;
-            }
-        }
-    </style>
+    <title>Keeping you motivated 365 days</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>COMING SOON</h1>
-    <p>We will be back soon ;</p>
+    <header>
+    <a href="https://instagram.com/whoizvanya" class="instagram-icon" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <h1 id="main-header">Thoughtify</h1>
+    <p id="sub-header">Inspiring Quotes For Your Day To Day Life</p>
+</header>
+
+
+    <main>
+        <section class="quote-list">
+            <div class="quote-item">
+                <img class= "first-child" src="Picsart_25-01-13_10-32-36-109.jpg" alt="Inspirational Quote 1" loading="lazy">
+                <p>"never became so thirsty that you drink from any cup that's presented to you. be selective, be smart, be wise."</p>
+            </div>
+            <div class="quote-item">
+                <img src="Picsart_25-01-14_09-36-15-657.png" alt="Inspirational Quote 2" loading="lazy">
+                <p>"two weeks of the year left. it's time to focus on good people, good energy, and good intentions."</p>
+            </div>
+            <div class="quote-item">
+                <img src="Picsart_25-01-11_18-44-32-106.jpg" alt="Inspirational Quote 3" loading="lazy">
+                <p>"keep going, love. all this hard work will be worth it in the end."</p>
+            </div>
+            <div class="quote-item">
+                <img src=" Picsart_25-01-09_17-12-45-421.jpg" loading="lazy">
+                <p>
+                    "focus on what makes your soul feel at peace because you are your biggest commitment."
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us: <a href="mailto:whoizvanya@gmail.com">whoizvanya@gmail.com</a></p>
+    </footer>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", () => {
+    const mainHeader = document.getElementById('main-header');
+    const subHeader = document.getElementById('sub-header');
+    const instagramIcon = document.querySelector(".instagram-icon");
+
+    // Ensure the main header is visible at start
+    mainHeader.classList.remove("hidden");
+    // Ensure the sub-header is hidden at start (not just visually but also in terms of CSS)
+    subHeader.style.display = "none"; 
+
+    let lastScrollY = window.scrollY; // Initialize lastScrollY
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY) {
+            // Scrolling down
+            mainHeader.classList.add("hidden");  // Hide main header
+            subHeader.style.display = "block"; // Show sub-header
+            subHeader.classList.remove("hidden"); // Make sure it is not hidden class
+            instagramIcon.classList.add("hidden"); // Hide Instagram icon
+        } else {
+            // Scrolling up
+            if (window.scrollY === 0) {
+                // At the top of the page
+                mainHeader.classList.remove("hidden"); // Show main header
+                subHeader.style.display = "none"; // Hide sub-header
+                instagramIcon.classList.remove("hidden"); // Show Instagram icon
+            }
+        }
+        lastScrollY = window.scrollY; // Update lastScrollY
+    });
+});
+    </script>
 </body>
 </html>
