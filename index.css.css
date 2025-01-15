@@ -208,11 +208,14 @@ footer a {
     }
 
     .quote-item img {
-        max-width: 100%; /* Ensure images fit within the container */
+        max-width: 120%; /* Ensure images fit within the container */
         height: auto;
-        border-radius: 8px; /* Add some rounded corners */
+        border-radius: 8px;
+         transition: transform 0.3s ease;/* Add some rounded corners */
     }
-
+.quote-item img:hover {
+    transform: scale(1.1); /* Slightly zoom the image on hover */
+}
     .quote-item p {
         font-size: 1.1rem;
         margin-top: 10px;
@@ -267,7 +270,7 @@ footer a {
     }
 
     .quote-item img {
-        width: 100%; /* Ensure images fit within the container */
+        width: 120%; /* Ensure images fit within the container */
         margin-bottom: 10px; /* Adjust spacing for mobile */
         border-radius: 6px; /* Slightly smaller rounded corners */
     }
