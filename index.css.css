@@ -256,7 +256,16 @@ footer a {
     .quote-item p {
         font-size: 0.5rem; /* Adjust font size for smaller text */
     }
+.quote-item {
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin-bottom: 15px; /* Reduce space between items */
+    }
 
+    .quote-item img {
+        width: 100%; /* Ensure images fit within the container */
+        margin-bottom: 10px; /* Adjust spacing for mobile */
+        border-radius: 6px; /* Slightly smaller rounded corners */
+    }
     footer {
         padding: 10px 0;
         font-size: 0.85rem;
