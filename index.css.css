@@ -270,10 +270,14 @@ footer a {
     }
 
     .quote-item img {
-        width: 120%; /* Ensure images fit within the container */
+        width: 140%; /* Ensure images fit within the container */
         margin-bottom: 10px; /* Adjust spacing for mobile */
         border-radius: 6px; /* Slightly smaller rounded corners */
+        transition: transform 0.3s ease;
     }
+    .quote-item img:hover {
+    transform: scale(1.1); /* Slightly zoom the image on hover */
+}
     footer {
         padding: 10px 0;
         font-size: 0.85rem;
