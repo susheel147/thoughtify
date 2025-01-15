@@ -70,37 +70,38 @@
 
     <script>
        document.addEventListener("DOMContentLoaded", () => {
-    const mainHeader = document.getElementById('main-header');
-    const subHeader = document.getElementById('sub-header');
-    const instagramIcon = document.querySelector(".instagram-icon");
+            const mainHeader = document.getElementById('main-header');
+            const subHeader = document.getElementById('sub-header');
+            const instagramIcon = document.querySelector(".instagram-icon");
 
-    // Ensure the main header is visible at start
-    mainHeader.classList.remove("hidden");
-    // Ensure the sub-header is hidden at start (not just visually but also in terms of CSS)
-    subHeader.style.display = "none"; 
+            // Ensure the main header is visible at start
+            mainHeader.classList.remove("hidden");
+            // Ensure the sub-header is hidden at start (not just visually but also in terms of CSS)
+            subHeader.style.display = "none"; 
 
-    let lastScrollY = window.scrollY; // Initialize lastScrollY
+            let lastScrollY = window.scrollY; // Initialize lastScrollY
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > lastScrollY) {
-            // Scrolling down
-            mainHeader.classList.add("hidden");  // Hide main header
-            subHeader.style.display = "block"; // Show sub-header
-            subHeader.classList.remove("hidden"); // Make sure it is not hidden class
-            instagramIcon.classList.add("hidden"); // Hide Instagram icon
-        } else {
-            // Scrolling up
-            if (window.scrollY === 0) {
-                // At the top of the page
-                mainHeader.classList.remove("hidden"); // Show main header
-                subHeader.style.display = "none"; // Hide sub-header
-                instagramIcon.classList.remove("hidden"); // Show Instagram icon
-            }
-        }
-        lastScrollY = window.scrollY; // Update lastScrollY
-    });
-});
-         document.addEventListener("contextmenu", (e) => {
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > lastScrollY) {
+                    // Scrolling down
+                    mainHeader.classList.add("hidden");  // Hide main header
+                    subHeader.style.display = "block"; // Show sub-header
+                    subHeader.classList.remove("hidden"); // Make sure it is not hidden class
+                    instagramIcon.classList.add("hidden"); // Hide Instagram icon
+                } else {
+                    // Scrolling up
+                    if (window.scrollY === 0) {
+                        // At the top of the page
+                        mainHeader.classList.remove("hidden"); // Show main header
+                        subHeader.style.display = "none"; // Hide sub-header
+                        instagramIcon.classList.remove("hidden"); // Show Instagram icon
+                    }
+                }
+                lastScrollY = window.scrollY; // Update lastScrollY
+            });
+
+            // Disable right-click on images
+            document.addEventListener("contextmenu", (e) => {
                 if (e.target.tagName === "IMG") {
                     e.preventDefault();
                     alert("Right-click is disabled to protect images.");
